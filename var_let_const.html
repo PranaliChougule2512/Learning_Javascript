@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //var example
+        var fname ="Anita";//Global Scope
+        var fname ="Panu";// re-declaration allowed
+        fname="Pranali";// re-assign allowed
+       document.write(fname+"<br>");
+
+       //let example
+       let lname = "Yesare";//block scope or funtion scope
+       //let lname="Chougule";// re-declaration not  allowed
+       lname="Chougule";// re-assign allowed
+       document.write(lname+"<br>");
+
+       //const example
+        const cname ="Amazon";//block-scope or function scope
+       // const cname ="TCS";// re-declaration not allowed
+        //cname="Cognizant";// re-assign not allowed
+       document.write(cname+"<br>");
+    </script>
+    
+</body>
+</html>

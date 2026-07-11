@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- example 1 -->
+     <h1 id="title">Hello it's Pranali</h1>
+     <button onclick="changeText()">Change Text</button>
+
+     <script>
+        function changeText(){
+            document.getElementById('title').innerHTML='Welcome To Pune';
+        }
+     </script>
+     <hr>
+      <!-- example 2 -->
+       <h1 id="msg">Click on button to change the color of the text</h1>
+       <button onclick="changeColor()">Change Color</button>
+       <script>
+        function changeColor(){
+            document.getElementById('msg').style.color="red";
+        }
+       </script>
+       <hr>
+       <!-- example 3 -->
+        <img id="myImg" src="images/birthday.jpeg" width="200px"/>
+        <button onclick="changeImage()">Change Image</button>
+        <script>
+            function changeImage(){
+                document.getElementById('myImg').src='images/coffee.jpeg';
+            }
+        </script>
+        <hr>
+        <!-- example 4 -->
+        <input type="text" id="nameInput" placeholder="Enter Name"/>
+        <button onclick="showName()">Submit</button>
+        <h3 id="output"></h3>
+        <script>
+            function showName(){
+                let name=document.getElementById('nameInput').value;
+                document.getElementById('output').innerHTML='Hello '+ name;
+            }
+        </script>
+        <hr>
+        <!-- example 5 -->
+         <h1 id="deleteMe">Delete this line</h1>
+         <button onclick="removePara()">Remove</button>
+         <script>
+            function removePara(){
+                document.getElementById('deleteMe').remove();
+            }
+         </script>
+         <h1 id="para">I love to travel across Mountains</h1>
+         <button onclick="increase()">+</button>
+         <button onclick="decrease()">-</button>
+         <script>
+            let size = 16;
+            function increase(){
+                size++;
+                document.getElementById('para').style.fontSize= size +'px';
+            }
+            function decrease(){
+                size--;
+                document.getElementById('para').style.fontSize= size +'px';
+            }
+         </script>
+         <hr>
+         <button onclick="toggleTheme()">Toggle Theme</button>
+         <style>
+            body{
+                background-color: white;
+                color: black;
+            }
+            .dark-mode{
+                background-color:black;
+                color: white;
+            }
+         </style>
+         <script>
+            function toggleTheme(){
+                document.body.classList.toggle("dark-mode");
+            }
+         </script>
+</body>
+</html>

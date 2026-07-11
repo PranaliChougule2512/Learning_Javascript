@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clock_d{
+            color: blueviolet;
+            text-shadow:3px 3px 3px gray;
+        }
+    </style>
+</head>
+<body>
+    <h3>Digital Clock</h3>
+    <h2 id="d_clock" class="clock_d"></h2>
+
+    <script>
+        function showTime(){
+            let now = new Date();
+             let time = now.toLocaleTimeString();
+             document.getElementById('d_clock').innerHTML =time;
+             setInterval(showTime,1000);
+        }
+        showTime();
+    </script>
+
+    <p id="msg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat eos ex, voluptatum eligendi voluptates est quidem obcaecati officiis soluta corrupti dolores adipisci, recusandae nobis pariatur, aperiam et suscipit consequuntur dignissimos!</p>
+    <script>
+        setTimeout(function(){
+            document.getElementById('msg').innerHTML="Hello its Pranali";
+        },15000);
+    </script>
+</body>
+</html>
